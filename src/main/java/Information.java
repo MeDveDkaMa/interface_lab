@@ -6,23 +6,27 @@ public class Information {
     public static StringBuilder sb = new StringBuilder();
 
     public void getInfo(Class clazz) {
-        printClass(clazz);
+        getNameClass(clazz);
         getFields(clazz);
         getMethods(clazz);
-        getParent(clazz);
         getInterfaces(clazz);
+        getParent(clazz);
+    }
+
+    public void printClass(){
+        System.out.println(Information.sb);
     }
 
     private void getFields(Class clazz) {
         Field[] field = clazz.getDeclaredFields();
         int cout = field.length;
-        sb.append("\nFields: " + printClass(clazz) + "\n==========================" + "\t ").append(cout).append("\n");
+        sb.append("\nFields: " + getNameClass(clazz) + "\n==========================" + "\t ").append(cout).append("\n");
         for (int i = 0; i < field.length; i++) {
-         sb.append(field[i]).append("\n");
+            sb.append(field[i]).append("\n");
         }
     }
 
-    private String printClass(Class clazz){
+    private String getNameClass(Class clazz){
         StringBuffer temp = new StringBuffer();
         temp.append(clazz.getName()).toString();
         return String.valueOf(temp);
@@ -31,7 +35,7 @@ public class Information {
     private void getInterfaces(Class clazz) {
         Class[] field = clazz.getInterfaces();
         int cout = field.length;
-        sb.append("\nInterfaces of :" + printClass(clazz) + "\n==========================" + "\t ").append(cout).append("\n");
+        sb.append("\nInterfaces: " + getNameClass(clazz) + "\n==========================" + "\t ").append(cout).append("\n");
         for (int i = 0; i < field.length; i++) {
             sb.append(field[i]).append("\n");
         }
@@ -40,7 +44,7 @@ public class Information {
     private void getMethods(Class clazz) {
         Method[] methods = clazz.getDeclaredMethods();
         int cout = methods.length;
-        sb.append("\nMethods:" + printClass(clazz) + "\n==========================" + "\t ").append(cout).append("\n");
+        sb.append("\nMethods: " + getNameClass(clazz) + "\n==========================" + "\t ").append(cout).append("\n");
         for (int i = 0; i < methods.length; i++) {
             sb.append(methods[i]).append("\n");
         }
@@ -48,7 +52,7 @@ public class Information {
 
     private void getParent(Class clazz) {
         if (clazz.getSuperclass() != null) {
-            sb.append("\nSuperclass: " + printClass(clazz) + "\n==========================\n" + "\t" + clazz.getSuperclass().getName()).append("\n");
+            sb.append("\nSuperclass: " + getNameClass(clazz) + "\n==========================\n" + clazz.getSuperclass().getName()).append("\n");
             getInfo(clazz.getSuperclass());
         }
     }
