@@ -13,7 +13,6 @@ public class Information {
     }
 
     private void getFields(Class clazz) {
-        String Fields = null;
         Field[] field = clazz.getDeclaredFields();
         int cout = field.length;
         sb.append("\nFields: \n" + "==========================" + "\t ").append(cout).append("\n");
@@ -23,7 +22,6 @@ public class Information {
     }
 
     private void getInterfaces(Class clazz) {
-        String Fields = null;
         Class[] field = clazz.getInterfaces();
         int cout = field.length;
         sb.append("\nInterfaces: \n" + "==========================" + "\t ").append(cout).append("\n");
@@ -33,7 +31,6 @@ public class Information {
     }
 
     private void getMethods(Class clazz) {
-        String Methods = null;
         Method[] methods = clazz.getDeclaredMethods();
         int cout = methods.length;
         sb.append("\nMethods: \n" + "==========================" + "\t").append(cout).append("\n");
