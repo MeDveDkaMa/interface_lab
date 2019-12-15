@@ -28,9 +28,17 @@ public class Main {
             TestInterface testInterface = (TestInterface)  test2.newInstance();
             testInterface.PrintMessage("Wooooooooow");
 
+
+            Information info1 = new Information();
+            info1.getInfo(test1);
+            info.getInfo(test2);
+
+            info.printClass();
+
+
+
 //            Class clazz = Class.forName(CLASSFORTEST);
 //            info.getInfo(clazz);
-//            info.printClass();
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
