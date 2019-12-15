@@ -15,10 +15,10 @@ public class Main {
 
 
             Myclassloader myclassloader1 = new Myclassloader();
-            Myclassloader myclassloader2 = new Myclassloader();
+            Myclassloader2 myclassloader2 = new Myclassloader2();
 
             Class test1 = myclassloader1.findClass("/home/alexander/IdeaProjects/Interface/target/classes/MyClass");
-            Class test2 = myclassloader2.findClass("/home/alexander/IdeaProjects/Interface/target/classes/MyClass");
+            Class test2 = myclassloader2.findClass("/home/alexander/IdeaProjects/Interface/target/classes/MyClass2");
             System.out.println("Загружаемый класс : " + test1);
 
             Method method = test1.getMethod("PrintMessage",new Class[]{String.class});
