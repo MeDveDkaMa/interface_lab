@@ -11,10 +11,12 @@ public class Information {
         getMethods(clazz);
         getInterfaces(clazz);
         getParent(clazz);
+
     }
 
     public void printClass(){
         System.out.println(Information.sb);
+
     }
 
     private void getFields(Class clazz) {
