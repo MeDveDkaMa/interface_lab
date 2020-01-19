@@ -18,8 +18,8 @@ public class Main {
             Myclassloader myclassloader1 = new Myclassloader();
             Myclassloader2 myclassloader2 = new Myclassloader2();
 
-            Class test1 = myclassloader1.findClass("/home/alexander/IdeaProjects/Interface/target/classes/MyClass");
-            Class test2 = myclassloader2.findClass("/home/alexander/IdeaProjects/Interface/target/classes/MyClass2");
+            Class test1 = myclassloader1.findClass("./target/classes/MyClass");
+            Class test2 = myclassloader2.findClass("./target/classes/MyClass2");
             System.out.println("Load Class: " + test1+ " && " + test2);
 
 //            Method method = test1.getMethod("PrintMessage",new Class[]{String.class});
