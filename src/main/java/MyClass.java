@@ -4,7 +4,17 @@ public class MyClass implements TestInterface{
     private String b = "dasdasd";
 
     public void PrintMessage(String message) {
+
         System.out.println(message + " from first class");
 
+
     }
+
+    public static void  CallTest(){
+
+        System.out.println("Hello from MyClass");
+
+
+    }
+
 }
